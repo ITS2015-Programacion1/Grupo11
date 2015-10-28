@@ -1,12 +1,13 @@
 # coding: utf-8
 import pilasengine
 import sys
+import compo.py
+import run.py
+
 
 pilas = pilasengine.iniciar()
 pilas.fondos.Selva()
 
-def niveles():
-    print "NIVELES"
 
 def iniciar_juego():
     pilas.fondos.Espacio()
@@ -17,11 +18,18 @@ def iniciar_juego():
         ('Salir', self.salir)]
     self.menu = pilas.actores.Menu(opciones)
 
-def salir():
-    sys.exit(0)
 
 def ayuda():
     print "(Escribir controles, de que se va a tratar, etc)"
+
+
+def niveles():
+    print "NIVELES"
+
+
+def salir():
+    sys.exit(0)
+
 
 menu = pilas.actores.Menu(
             [
