@@ -21,7 +21,7 @@ def salir():
     sys.exit(0)
 
 def ayuda():
-    print "Esctibir como va a funcionar el juego"
+    print "(Escribir controles, de que se va a tratar, etc)"
 
 menu = pilas.actores.Menu(
             [
