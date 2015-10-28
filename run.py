@@ -44,6 +44,9 @@ class Kuro(pilasengine.actores.Actor):
 pilas.actores.vincular(Kuro)
 
 kuro=Kuro(pilas)
+
 mapa=pilas.actores.MapaTiled("plataformas.tmx")
 
+
 pilas.ejecutar()
+
