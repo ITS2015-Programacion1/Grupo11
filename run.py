@@ -3,7 +3,7 @@
 import pilasengine
 import random
 
-pilas = pilasengine.iniciar()
+pilas = pilasengine.iniciar(ancho=3200,alto=480)
 
 mapa=pilas.actores.MapaTiled("pacmanfinal.tmx")
 
