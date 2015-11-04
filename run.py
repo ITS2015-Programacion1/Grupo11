@@ -5,6 +5,8 @@ import random
 
 pilas = pilasengine.iniciar()
 
+mapa=pilas.actores.MapaTiled("pacmanfinal.tmx")
+
 class Kuro(pilasengine.actores.Actor):
     def iniciar(self):
         self.imagen = "data/Kuro/mario.png"
@@ -18,7 +20,7 @@ class Kuro(pilasengine.actores.Actor):
         salto = 5
         self.x = self.figura.x
         self.y = self.figura.y
-        
+	pilas.camara.x = kuro.x        
         if pilas.control.izquierda:
             self.figura.x -= velocidad
             self.espejado = True
@@ -45,9 +47,8 @@ def si_pasa_por_el_medio(hola):
 medio = pilas.fisica.Rectangulo(0, 0, 636, 1, sensor=True, dinamica=True)
 
 pilas.actores.vincular(Kuro)
-kuro=pilas.actores.Kuro()
+kuro=Kuro(pilas)
 
-mapa=pilas.actores.MapaTiled("plataformas.tmx")
 
 pilas.ejecutar()
 
