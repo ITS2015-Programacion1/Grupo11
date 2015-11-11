@@ -5,13 +5,6 @@ from Kuro import KuroPP
 import random
 
 class Nivel1(pilasengine.escenas.Escena):
-
     def iniciar(self):
-    	print 'Hola<'
-        mapa=self.pilas.actores.MapaTiled("data/Mapa/pacmanfinal.tmx")        
-        #pingu =self.pilas.actores.Pingu()
+        mapa=self.pilas.actores.MapaTiled("data/Mapa/pacmanfinal.tmx")
         kuro=self.pilas.actores.KuroPP()
-
-    def ejecutar(self):
-    	print 'Se ejecuto'
-        

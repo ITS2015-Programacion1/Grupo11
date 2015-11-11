@@ -9,6 +9,7 @@ pilas = pilasengine.iniciar()
 pilas.fondos.Espacio()
 pilas.escenas.vincular(Nivel1)
 pilas.actores.vincular(KuroPP)
+
 def iniciar_juego():
     
     menu.eliminar
