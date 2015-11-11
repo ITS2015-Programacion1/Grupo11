@@ -4,16 +4,14 @@ import pilasengine
 from Kuro import KuroPP
 import random
 
-pilas = pilasengine.iniciar()
-
-class nivel1(pilasengine.escenas.Escena):
+class Nivel1(pilasengine.escenas.Escena):
 
     def iniciar(self):
-        fondo=pilas.fondos.Pasto()
-        mapa=pilas.actores.MapaTiled("data/Mapa/pacmanfinal.tmx")
+    	print 'Hola<'
+        mapa=self.pilas.actores.MapaTiled("data/Mapa/pacmanfinal.tmx")        
+        #pingu =self.pilas.actores.Pingu()
+        kuro=self.pilas.actores.KuroPP()
 
     def ejecutar(self):
-        pilas.actores.vincular(KuroPP)
-        kuro=pilas.actores.KuroPP()
-
-pilas.ejecutar()
+    	print 'Se ejecuto'
+        
