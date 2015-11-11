@@ -1,35 +1,26 @@
 # coding: utf-8
 import pilasengine
+from escena_nivel1 import nivel1
 import sys
-import compo.py
-import run.py
 
 
 pilas = pilasengine.iniciar()
-pilas.fondos.Selva()
-
+pilas.fondos.Espacio()
+pilas.escenas.vincular(nivel1)
 
 def iniciar_juego():
-    pilas.fondos.Espacio()
-    opciones = [
-        ('Comenzar a jugar', self.comenzar),
-        ('Ayuda',self.ayuda),
-        ('Niveles',niveles),
-        ('Salir', self.salir)]
-    self.menu = pilas.actores.Menu(opciones)
-
+    
+    menu.eliminar
+    pilas.escenas.nivel1()
 
 def ayuda():
     print "(Escribir controles, de que se va a tratar, etc)"
 
-
 def niveles():
     print "NIVELES"
 
-
 def salir():
     sys.exit(0)
-
 
 menu = pilas.actores.Menu(
             [
