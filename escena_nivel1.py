@@ -14,10 +14,6 @@ class Nivel1(pilasengine.escenas.Escena):
         self.pilas.fisica.eliminar_techo()
         self.pilas.fisica.gravedad_y=-20
         self.lastChange = time()
-               
-
-        #self.pilas.colisiones.agregar(self.sensor_Kuro, self.medio, self.pasar_medio)
-
 
     def pasar_medio(self):
         print "Pasa por el medio: ".format(self.pilas.fisica.gravedad_y)
@@ -30,6 +26,3 @@ class Nivel1(pilasengine.escenas.Escena):
         if pos<1 and  now - self.lastChange > 2:
             self.lastChange = now            
             self.pasar_medio()
-
-        #self.sensor_Kuro.x=self.kuro.x
-        #self.sensor_Kuro.y=self.kuro.y
