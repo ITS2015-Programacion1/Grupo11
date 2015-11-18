@@ -2,17 +2,14 @@
 import pilasengine
 from escena_nivel1 import Nivel1
 from Kuro import KuroPP
-import compo
 import sys
 
 pilas = pilasengine.iniciar()
 pilas.fondos.Espacio()
 pilas.escenas.vincular(Nivel1)
 pilas.actores.vincular(KuroPP)
-pilas.comportamientos.vincular(compo.SaltarUnaVez)
 
 def iniciar_juego():
-    menu.eliminar
     pilas.escenas.Nivel1()
 
 def ayuda():
