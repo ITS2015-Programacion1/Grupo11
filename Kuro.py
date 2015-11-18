@@ -4,14 +4,15 @@ import pilasengine
 class KuroPP(pilasengine.actores.Actor):
     def iniciar(self,x=0,y=0):
         self.imagen = "data/Kuro/mario.png"
-        self.figura=self.pilas.fisica.Rectangulo(self.x, self.y, 20, 33, friccion=0,restitucion=0)
+        self.figura=self.pilas.fisica.Rectangulo(self.x, self.y, 20, 33, friccion=0, restitucion=0)
         self.figura.sin_rotacion=True
         self.sensor_pies = self.pilas.fisica.Rectangulo(self.x, self.y, 10, 5, sensor=True, dinamica=False)
         self.x=x
         self.y=y
+
     def actualizar(self):
-        velocidad = 10
-        salto = 2
+        velocidad = 5
+        salto = 1.5
         self.x = self.figura.x
         self.y = self.figura.y
 

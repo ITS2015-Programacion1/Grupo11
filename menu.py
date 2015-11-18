@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: utf-8 
 import pilasengine
 from escena_nivel1 import Nivel1
 from Kuro import KuroPP
