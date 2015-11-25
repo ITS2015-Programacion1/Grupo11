@@ -2,29 +2,29 @@
 # -*- coding: utf-8 -*-
 import pilasengine
 from Kuro import KuroPP
-from enemigos import Nuevoe
+#from enemigos import Nuevoe
 import random
 from time import time   
 
 class Nivel1(pilasengine.escenas.Escena):
     def iniciar(self):
-        mapa=self.pilas.actores.MapaTiled("data/Mapa/pacmanfinal.tmx")
+        mapa=self.pilas.actores.MapaTiled("data/Mapa/Nivel1/pacmanfinal.tmx")
         self.kuro=self.pilas.actores.KuroPP(x=-1539,y=170)
         self.pilas.fisica.eliminar_paredes()
         self.pilas.fisica.eliminar_suelo()
         self.pilas.fisica.eliminar_techo()
         self.pilas.fisica.gravedad_y=-20
         self.lastChange = time()
-        
-        self.pilas.tareas.agregar(1, crear)
+        #Nuevoe.crear
+
     def pasar_medio(self):
-        print "Pasa por el medio: ".format(self.pilas.fisica.gravedad_y)
-        self.kuro.rotacion = 180
         self.pilas.fisica.gravedad_y *= -1
         
     def actualizar(self):
-        pos = self.kuro.y ** 2        
+        print str(self.kuro.y ** 2)
+        pos = self.kuro.y ** 2
         now = time()
-        if pos<1 and  now - self.lastChange > 2:
-            self.lastChange = now            
+        if pos<100 and now - self.lastChange > 2:
+            self.kuro.rotacion=[self.kuro.rotacion+180], .7 
+            self.lastChange = now
             self.pasar_medio()

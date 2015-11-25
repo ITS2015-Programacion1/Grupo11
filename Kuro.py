@@ -7,6 +7,7 @@ class KuroPP(pilasengine.actores.Actor):
         self.figura=self.pilas.fisica.Rectangulo(self.x, self.y, 20, 33, friccion=0, restitucion=0)
         self.figura.sin_rotacion=True
         self.sensor_pies = self.pilas.fisica.Rectangulo(self.x, self.y, 10, 5, sensor=True, dinamica=False)
+        self.sensor_cabeza= self.pilas.fisica.Rectangulo(self.x, self.y, 10, 5, sensor=True, dinamica=False)
         self.x=x
         self.y=y
 
@@ -34,8 +35,18 @@ class KuroPP(pilasengine.actores.Actor):
             if self.pilas.control.arriba:
                 self.figura.impulsar(0, salto)
 
+        if self.esta_tocando_el_techo():
+            if self.pilas.control.abajo:
+                self.figura.impulsar(0, -salto)
+
         self.sensor_pies.x = self.x
         self.sensor_pies.y = self.y - 20
+
+        self.sensor_cabeza.x = self.x
+        self.sensor_cabeza.y = self.y + 20
         
     def esta_pisando_el_suelo(self):
         return len(self.sensor_pies.figuras_en_contacto) > 0
+
+    def esta_tocando_el_techo(self):
+        return len(self.sensor_cabeza.figuras_en_contacto) >  0
