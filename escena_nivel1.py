@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import pilasengine
 from Kuro import KuroPP
+from enemigos import Nuevoe
 import random
 from time import time   
 
@@ -14,7 +15,8 @@ class Nivel1(pilasengine.escenas.Escena):
         self.pilas.fisica.eliminar_techo()
         self.pilas.fisica.gravedad_y=-20
         self.lastChange = time()
-
+        
+        self.pilas.tareas.agregar(1, crear)
     def pasar_medio(self):
         print "Pasa por el medio: ".format(self.pilas.fisica.gravedad_y)
         self.kuro.rotacion = 180
