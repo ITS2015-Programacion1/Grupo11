@@ -4,6 +4,7 @@ from escena_nivel1 import Nivel1
 from escena_ayuda import Ayuda
 from enemigos import Nuevoe
 from Kuro import KuroPP
+from escena_ganar import Ganar
 import sys
 
 #sys.setrecursionlimit()
@@ -13,6 +14,7 @@ pilas.escenas.vincular(Nivel1)
 pilas.escenas.vincular(Ayuda)
 pilas.actores.vincular(KuroPP)
 pilas.actores.vincular(Nuevoe)
+pilas.escenas.vincular(Ganar)
 
 def iniciar_juego():
     pilas.escenas.Nivel1()
