@@ -50,3 +50,10 @@ class KuroPP(pilasengine.actores.Actor):
 
     def esta_tocando_el_techo(self):
         return len(self.sensor_cabeza.figuras_en_contacto) >  0
+
+    def perder(self):
+        self.figura.x=-1539
+        if self.pilas.fisica.gravedad_y<0:
+            self.figura.y=170
+        else:
+            self.figura.y=-170

@@ -24,6 +24,7 @@ def ayuda():
 
 def niveles():
     print "NIVELES"
+    
 
 def salir():
     sys.exit(0)
